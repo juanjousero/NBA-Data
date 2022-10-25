@@ -70,7 +70,7 @@ export default function Games({ teams }) {
                         <h1>Select a season</h1>
                         <ul className={styles.list}>
                             {seasons.map((season) => 
-                                <li onClick={() => selectSeason(season)}>{season}</li>
+                                <li key={season} onClick={() => selectSeason(season)}>{season}</li>
                             )}
                         </ul>
                     </>
@@ -79,7 +79,7 @@ export default function Games({ teams }) {
                         <h1>Select a team</h1>
                         <ul className={styles.list}>
                             {teams.map((team) => 
-                                <li onClick={() => selectTeam(team)}>
+                                <li key={team.id} onClick={() => selectTeam(team)}>
                                     <img src={teamLogos[team.id - 1]}/>
                                     <p>{team.abbreviation}</p>
                                 </li>
@@ -93,7 +93,8 @@ export default function Games({ teams }) {
                         </div>
                         <ul>
                             {games.map((game) => 
-                                <Game game={game} />
+                                <Game key={game.id}
+                                      game={game} />
                             )}
                         </ul>
                       </div>  

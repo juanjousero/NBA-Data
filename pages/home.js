@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header';
 import { teamLogos } from '../components/Team';
-import { useState, useEffect } from 'react';
 
 import styles from '../styles/Home.module.css'
 
@@ -25,8 +24,8 @@ export default function Home() {
           <div className={styles.container}>
               <h1>WELCOME TO <span className={styles.nba}>NBA</span></h1>
               <main className={styles.main}>
-                <div className={styles.firstRow}>{logos.map(logo => <img src={logo}/>)}</div>
-                <div className={styles.secondRow}>{logos.map(logo => <img src={logo}/>)}</div>
+                <div className={styles.firstRow}>{logos.map(logo => <img key={logos.indexOf(logo)} src={logo}/>)}</div>
+                <div className={styles.secondRow}>{logos.map(logo => <img key={logos.indexOf(logo)} src={logo}/>)}</div>
             </main>
           </div>
         </>

@@ -53,7 +53,8 @@ export default function Teams({ teams, playersData }) {
                 <Header className={styles.header}/>
                 <div className={styles.container}>
                     <ul>
-                        {teams.map(team => <Team team={team}
+                        {teams.map(team => <Team key={team.id}
+                                                 team={team}
                                                  onClick={() => changeView(team)}
                                                  />)}
                     </ul>

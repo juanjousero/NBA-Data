@@ -14,7 +14,7 @@ export function Game({ game }) {
         <>
         {!showTeams 
             ?   <></>
-            :   <li>
+            :   <li key={game.id}>
                     <img src={teamLogos[game.home_team.id - 1]}/>
                     <h2>{game.home_team.abbreviation}</h2>
                     <h3>{game.home_team_score}</h3>
