@@ -1,0 +1,64 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-around;
+    align-items: center;
+}
+
+.team, .stadium, .players {
+    width: 33.3%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
+}
+
+.container h2 {
+    font-size: 2.75rem;
+    text-align: center;
+}
+
+.container h3 {
+    font-size: 2.25rem;
+}
+
+.container  p {
+    font-size: 1.5rem;
+}
+
+.counter {
+    font-size: 2rem;
+}
+
+.court {
+    background-color: white;
+    border-radius: 8px;
+}
+
+.players {
+    justify-content: flex-start;
+    scrollbar-width: 0;
+    scrollbar-color: transparent transparent;
+}
+
+.players h1 {
+    margin-top: 20%;
+    font-size: 2.75rem;
+    font-weight: 600;
+}
+
+.backLogo {
+    margin-bottom: -70px;
+    padding: 7.5px;
+    font-size: 1.25rem !important;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.backLogo:hover {
+    cursor: pointer;
+}

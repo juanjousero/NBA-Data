@@ -1,0 +1,122 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    z-index: 98;
+}
+
+.container div {
+    width: 25%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: -2px 2px 12px 5px rgba(255, 255, 255, 0.5);
+    z-index: 99;
+}
+
+.homeContainer {
+    transform: translate(20%, -100%);
+}
+
+.teamsContainer {
+    transform: translate(-20%, 100%);
+}
+
+.homeContainer:hover, 
+.gamesContainer:hover,
+.teamsContainer:hover {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+.homeContainer:hover {
+    animation-name: homeAnimation;
+}
+
+@keyframes homeAnimation {
+    0% {
+        background: none;
+        opacity: 0.2;
+    }
+
+    10% {
+        background-image: url('/homeBackground.png');
+        background-size: contain;
+        background-position: center;
+        color: rgba(181, 181, 181, 0.25);
+        opacity: 0.2;
+    }
+
+    100% {
+        background-image: url('/homeBackground.png');
+        background-size: contain;
+        background-position: center;
+        color: rgba(0, 0, 0, 0);
+    }
+}
+
+.gamesContainer:hover {
+    animation-name: gamesAnimation;
+}
+
+@keyframes gamesAnimation {
+    0% {
+        background: none;
+        opacity: 0.2;
+    }
+
+    10% {
+        background-image: url('/gamesBackground.png');
+        background-size: cover;
+        background-position: 50% 70%;
+        color: rgba(181, 181, 181, 0.25);
+        opacity: 0.2;
+    }
+
+    100% {
+        background-image: url('/gamesBackground.png');
+        background-size: cover;
+        background-position: 50% 70%;
+        color: rgba(0, 0, 0, 0);
+        opacity: 1;
+    }
+}
+
+.teamsContainer:hover {
+    animation-name: teamsAnimation;
+}
+
+@keyframes teamsAnimation {
+    0% {
+        background: none;
+        opacity: 0.2;
+    }
+
+    10% {
+        background-image: url('/teamsBackground.png');
+        background-size: cover;
+        background-position: 50% 75%;
+        background-repeat: no-repeat;
+        color: rgba(181, 181, 181, 0.25);
+        opacity: 0.2;
+    }
+
+    100% {
+        background-image: url('/teamsBackground.png');
+        background-size: cover;
+        background-position: 50% 75%;
+        background-repeat: no-repeat;
+        color: rgba(0, 0, 0, 0);
+        opacity: 1;
+    }
+}

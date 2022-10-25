@@ -1,0 +1,78 @@
+.container {
+  width: 100%;
+  max-height: 90vh;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+}
+
+.container h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+.nba {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12.5rem;
+  font-weight: 800;
+  background: -webkit-linear-gradient(0deg, rgba(23,68,136,1) 0%, rgba(254,254,254,1) 50%, rgba(198,49,50,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main {
+  width: 100%;
+  min-height: 30vh;
+  max-height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.firstRow,
+.secondRow {
+  width: 100%;
+  height: 90vh;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 999;
+  overflow: hidden;
+  opacity: 0.65;
+}
+
+.main img {
+  width: 150px;
+  padding: 0 20px;
+  filter: grayscale(0.75);
+  animation-name: logoAnimation;
+  animation-duration: 1000s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.secondRow img {
+  transform: translateX(-3000px);
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: 0;
+  }
+
+  100% {
+    transform: translateX(-100000px);
+  }
+}

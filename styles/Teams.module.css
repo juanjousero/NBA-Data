@@ -1,0 +1,41 @@
+.container {
+    height: 100vh;
+    padding: 0rem 1px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgba(0,0,0, 1);
+    background: linear-gradient(62deg, rgba(20,20,20,1) 0%, rgba(20,20,20,0.9) 60%, rgba(50,50,50,0.65) 100%); 
+    overflow-y: hidden;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+}
+
+.header ul {
+    height: 10vh !important;
+}
+
+.container ul {
+    width: 80%;
+    height: 85vh;
+    position: relative;
+    top: 6vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    overflow-y: scroll !important;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    z-index: 999;
+}
+
+.container ul:hover {
+    scrollbar-width: thin;
+    scrollbar-color: white transparent;
+}
