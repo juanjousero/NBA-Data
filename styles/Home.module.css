@@ -57,14 +57,17 @@
   width: 150px;
   padding: 0 20px;
   filter: grayscale(0.75);
-  animation-name: logoAnimation;
-  animation-duration: 1000s;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-fill-mode: forwards;
+}
+
+.firstRow img {
+  animation-name: logoAnimation;
 }
 
 .secondRow img {
-  transform: translateX(-3000px);
+  animation-name: logoAnimationReverse;
 }
 
 @keyframes logoAnimation {
@@ -73,6 +76,16 @@
   }
 
   100% {
-    transform: translateX(-100000px);
+    transform: translateX(-4460px);
+  }
+}
+
+@keyframes logoAnimationReverse {
+  0% {
+    transform: translateX(-4460px);
+  }
+
+  100% {
+    transform: translateX(0px);
   }
 }

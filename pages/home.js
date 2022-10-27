@@ -7,7 +7,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
     const logos = [];
 
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 2; i++) {
       for (let j = 0; j < teamLogos.length; j++) {
         logos.push(teamLogos[j]);
       }
